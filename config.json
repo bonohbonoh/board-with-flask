@@ -1,0 +1,6 @@
+{
+    "APP_MODE": "development",
+    "DB_USER_NAME": "root",
+    "DB_USER_PASSWD": "00000000",
+    "DB_HOST": "localhost"
+  }

@@ -3,7 +3,7 @@ from flask_restx import Resource
 
 from apps.src.dto.request.Board_request_dto import board_request_dto
 from apps.src.dto.response.Board_response_dto import board_response_dto
-from apps.src.sevice.Board_service import board_service
+from apps.src.service.Board_service import board_service
 
 board_api = board_request_dto.api
 

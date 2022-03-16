@@ -2,7 +2,7 @@ from flask import request, session
 from flask_restx import Resource
 
 from apps.src.dto.request.Comment_request_dto import comment_request_dto
-from apps.src.sevice.Comment_service import comment_service
+from apps.src.service.Comment_service import comment_service
 
 comment_api = comment_request_dto.api
 

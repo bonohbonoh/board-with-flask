@@ -2,7 +2,7 @@ from flask import request, session
 from flask_restx import Resource
 
 from apps.src.dto.request.User_request_dto import user_request_dto
-from apps.src.sevice.User_service import user_service
+from apps.src.service.User_service import user_service
 
 user_api = user_request_dto.api
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+            rel="stylesheet"
+            id="bootstrap-css"
+    />
+</head>
+<h1>board</h1>
+
+<div id="un-login-page">
+    <a href="/board/registration" role="button" class="btn btn-primary">글 등록</a>
+    <a href="/signUp" role="button" class="btn btn-primary">회원 가입</a>
+    <a href="/logIn" role="button" class="btn btn-primary">로그인</a>
+</div>
+<div id="logged-in-page">
+    <a href="/board/registration" role="button" class="btn btn-primary">글 등록</a>
+    <a href="/logOut" role="button" class="btn btn-danger" id="btn-log-out">로그아웃</a>
+    <a href="/auth" role="button" class="btn btn-primary" id="btn-my-page">내정보</a>
+</div>
+<table class="table table-horizontal table-bordered">
+    <thead>
+    <tr>
+        <th>title</th>
+        <th>author</th>
+    </tr>
+    </thead>
+    <tbody id='list'>
+    </tbody>
+</table>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/index.js"></script>
+
+<footer>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+            rel="stylesheet"
+            id="bootstrap-css"
+    />
+</head>
+<body>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form id="readBoardObj">
+
+            <div class="form-group" , style="hidden">
+                <input type="text" class="form-control" id="boardId" value={{ boardId }} readonly
+                       style="display:none"></input>
+            </div>
+            <div class="form-group" , style="hidden">
+                <input type="text" class="form-control" id="commentId" value={{ commentId }} readonly
+                       style="display:none"></input>
+            </div>
+        </form>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            if (confirm("댓글을 삭제하시겠습니까?")) {
+                deleteComment();
+            }
+
+            function deleteComment() {
+                const data = {
+                    'board_id': $('#boardId').val(),
+                };
+                const commentId = $('#commentId').val();
+                $.ajax({
+                    type: 'DELETE',
+                    url: '/api/v1/comment/' + '/' + commentId,
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(data),
+                }).done(function () {
+                    alert('삭제 완료');
+                    window.location.href = '/board/read/' + data.board_id;
+                }).fail(function (error) {
+                    alert(JSON.stringify(error));
+                });
+            }
+        </script>
+    </div>
+</div>
+<br>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/index.js"></script>
+</body>
+</html>
